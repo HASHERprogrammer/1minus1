@@ -1,7 +1,11 @@
 import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React, { useRef } from 'react'
+
+import { gsap } from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 const Whatwedo = () => {
@@ -9,11 +13,11 @@ const Whatwedo = () => {
     useGSAP(() => {
         const tl = gsap.timeline();
 
-        gsap.from('.animate' , {
-            opacity:0,
-            duration:2,
-            y:100,
-            stagger:0.2,
+        gsap.from('.animate', {
+            opacity: 0,
+            duration: 2,
+            y: 100,
+            stagger: 0.2,
             scrollTrigger: {
                 trigger: '.animate',
                 start: 'top 60%',
@@ -29,7 +33,7 @@ const Whatwedo = () => {
                     <h3 ref={ref} className='animate font-["Gilroy "] font-bold  mt-[2vw]'>WHAT WE DO</h3>
 
                     <div className='mt-[1vw]'>
-                        <p  className='animate text-[4vw] font-extralight font-["Gilroy "]'>
+                        <p className='animate text-[4vw] font-extralight font-["Gilroy "]'>
                             1minus1 is an award-winning <span className='font-bold'>creative marketing agency</span> dedicated to the games industry.
                         </p>
                     </div>

@@ -4,6 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useRef } from 'react'
 import { IoMdPlay } from "react-icons/io";
 gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
 // bgvideos
 // https://1minus1-2021.s3.eu-west-2.amazonaws.com/dancer_6905da6b12.webm
 // https://1minus1-2021.s3.eu-west-2.amazonaws.com/t10_banner_f3cd4de4a5.webm
