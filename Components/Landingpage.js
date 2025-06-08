@@ -16,14 +16,14 @@ const Landingpage = () => {
 
     const minus1 = useRef(null)
 
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.all',
-            start: "",
-        }
-    });
+
 
     useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.all',
+            }
+        });
         tl.from(minus1.current, {
             opacity: 0,
             duration: 2,
@@ -115,14 +115,14 @@ const Landingpage = () => {
                                     return (
                                         <div className=''>
                                             <h2
-                                            key={index}
-                                            className={`text-white font-[Neue Montreal] 
+                                                key={index}
+                                                className={`text-white font-[Neue Montreal] 
                                             ${index === 0 && "am:text-[12vw] text-[6vw] tracking-wide font-light"} 
                                             ${index === 1 && "am:text-[10vw] text-[5vw] -mt-[2vw] am:-mt-[4vw] "} 
                                             ${index === 2 && "text-[.9vw] font-['Neue_Montreal'] font-bold tracking-wide    text-nowrap    am:text-[2.4vw] md:text-[1.5vw] lg:text-[1.5vw]"}`}
-                                        >
-                                            {item}
-                                        </h2>
+                                            >
+                                                {item}
+                                            </h2>
                                         </div>
                                     )
                                 })}
@@ -133,7 +133,7 @@ const Landingpage = () => {
                                 <div className='text-white text-[2vw] am:text-[5vw] border-2 border-[#282526] rounded-full p-3 flex itmes-center justify-center ' >
                                     <IoMdPlay />
                                 </div>
-                                <div  className=' am:w-[90vw] '>
+                                <div className=' am:w-[90vw] '>
                                     <p className='text-white font-bold text-[1.4vw] am:text-[4vw]'>Check out our showreel</p>
                                     <p className='text-white font-light font-["Neue_Montreal"] text-[1.vw] tracking-tight am:text-[3vw] leading-none text-wrap am:w-[100%] w-[27vw] sm:w-[30vw]  sm:text-wrap 2xl:text-[1.2vw] md:w-[50vw]    '>Innovate. Inspire. Create your story. Change the game.  Websites, web experiences, applications and marketing.</p>
                                 </div>
